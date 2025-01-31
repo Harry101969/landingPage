@@ -1,0 +1,64 @@
+@import "tailwindcss";
+* {
+  overflow-x: hidden;
+}
+Main background .app-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#111 40%, #000 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid pattern */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 4cm 4cm;
+  background-color: #0b0909;
+  /* background-color: black; */
+  background-image: linear-gradient(
+      to right,
+      rgba(34, 34, 34, 0.5) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(34, 34, 34, 0.5) 1px, transparent 1px);
+  z-index: 1; /* Below the orange glow but above the background */
+}
+
+/* Orange glow effect in a triangle shape */
+.app-background::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 30%;
+  height: 25%;
+  background: linear-gradient(
+    135deg,
+    /* Angle of the rays */ rgba(255, 140, 0, 1) 15%,
+    rgba(255, 140, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  filter: blur(120px); /* Softens the glow */
+  transform: rotate(45deg); /* Adjusts the angle */
+  z-index: 2; /* Above the grid */
+  box-shadow: 0 0 200px rgba(255, 140, 0, 1), 0 0 350px rgba(255, 140, 0, 0.7); /* Glowing effect around the rays */
+  overflow-x: hidden;
+}
+
+/* Content styling */
+/* Adjust content so it's centered below navbar */
+.content {
+  position: relative;
+  z-index: 5;
+  color: white;
+  text-align: center;
+  margin-top: 5rem; /* Push content down */
+}
