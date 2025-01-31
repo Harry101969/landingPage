@@ -13,7 +13,6 @@ Main background .app-background {
   justify-content: center;
 }
 
-/* Grid pattern */
 .grid-overlay {
   position: absolute;
   top: 0;
