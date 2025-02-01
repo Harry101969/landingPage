@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import "./App.css";
 import Hero from "./Components/Hero";
+import Circuit from "./Components/Circuit";
+import RayEffect from "./Components/RayEffect";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,11 +15,7 @@ const App = () => {
   return (
     <div className="app-background">
       <div className="grid-overlay"></div>
-      <div className="ray-container">
-        <div className="ray-effect"></div>
-        <div className="ray-effect-1"></div>
-        <div className="ray-effect-2"></div>
-      </div>
+      <RayEffect />
 
       {/* Navbar at the top */}
       <Navbar isLoaded={isLoaded} />
@@ -26,6 +24,7 @@ const App = () => {
       <div className="content">
         <Hero />
       </div>
+      <Circuit />
     </div>
   );
 };

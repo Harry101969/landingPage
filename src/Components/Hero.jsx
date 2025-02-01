@@ -83,7 +83,7 @@ const Hero = () => {
 
   return (
     <main className="relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-18 pb-25">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-18 ">
         {/* Beta release badge */}
         <div
           className={`flex justify-center transition-all duration-500 delay-700 ${

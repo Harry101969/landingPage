@@ -5,7 +5,7 @@
 Main background .app-background {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: radial-gradient(#111 40%, #000 100%);
   overflow: hidden;
   display: flex;
@@ -54,7 +54,7 @@ Main background .app-background {
 
 .ray-effect {
   height: 488px;
-  width: 12px;
+  width: 6px;
   background: linear-gradient(
     45deg,
     rgba(255, 140, 0, 1) 15%,
@@ -65,7 +65,7 @@ Main background .app-background {
   z-index: 2;
   position: absolute;
   transform: translate(-20, -20);
-  rotate: 62deg;
+  rotate: 66deg;
   filter: blur(10px);
   transform-origin: top right;
   box-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 120px rgba(255, 100, 0, 1),
@@ -85,7 +85,7 @@ Main background .app-background {
   z-index: 2;
   position: absolute;
   transform: translate(-20, -20);
-  rotate: 70deg;
+  rotate: 78deg;
   filter: blur(10px);
   transform-origin: top right;
   box-shadow: 0 0 50px rgba(255, 165, 0, 1), 0 0 120px rgba(255, 100, 0, 1),
@@ -105,7 +105,7 @@ Main background .app-background {
   z-index: 2;
   position: absolute;
   transform: translate(-20, -20);
-  rotate: 78deg;
+  rotate: 69deg;
   filter: blur(10px);
   transform-origin: top right;
   box-shadow: 0 0 10px rgb(15, 15, 15), 0 0 10px rgba(242, 123, 4, 0.2),
@@ -117,7 +117,76 @@ Main background .app-background {
   position: relative;
   z-index: 5;
   color: white;
-  text-align: center;
-  margin-top: 5rem;
-  /* Push content down */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  /* Keeps overall layout centered */
+}
+
+/* Hero Component Styling */
+.content > :first-child {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Circuit Component Styling */
+.circuit-container {
+  position: sticky; /* Stick to the top */
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%;
+  z-index: 6; /* Ensure it stays above background elements */
+}
+
+/* The circuit-line */
+.circuit-line {
+  overflow-x: hidden;
+  stroke: rgb(30, 28, 28); /* Light gray stroke */
+  stroke-width: 2px; /* Line thickness */
+  fill: none; /* No fill */
+  stroke-linecap: round; /* Rounded ends for a smoother look */
+  /* Optional: Dotted effect */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .circuit-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .space-x-32 {
+    gap: 1rem;
+  }
+
+  .space-y-16 {
+    gap: 1rem;
+  }
+
+  .mr-32,
+  .ml-32,
+  .mr-36,
+  .ml-36 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .ray-effect {
+    height: 300px;
+    width: 8px;
+    rotate: 40deg;
+  }
+  .ray-effect-1 {
+    height: 200px;
+    width: 8px;
+    rotate: 50deg;
+  }
+  .ray-effect-2 {
+    height: 260px;
+    width: 8px;
+    rotate: 55deg;
+  }
 }

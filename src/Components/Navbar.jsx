@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 200); // 0.2 seconds delay
+    }, 300); // 0.2 seconds delay
     return () => clearTimeout(timer);
   }, []);
 
@@ -29,7 +29,7 @@ const Navbar = () => {
         }`}
       >
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-10">
             {/* Left - Logo */}
             <div className="flex-shrink-0">
               <Globe className="h-8 w-8 text-white" />
