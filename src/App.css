@@ -32,7 +32,7 @@ Main background .app-background {
 }
 
 /* Orange glow effect in a triangle shape */
-.app-background::before {
+/* .app-background::before {
   content: "";
   position: absolute;
   top: -20%;
@@ -41,17 +41,76 @@ Main background .app-background {
   height: 25%;
   background: linear-gradient(
     135deg,
-    /* Angle of the rays */ rgba(255, 140, 0, 1) 15%,
+     rgba(255, 140, 0, 1) 15%,
     rgba(255, 140, 0, 0.5) 40%,
     rgba(0, 0, 0, 0) 80%
   );
-  filter: blur(120px); /* Softens the glow */
-  transform: rotate(45deg); /* Adjusts the angle */
-  z-index: 2; /* Above the grid */
-  box-shadow: 0 0 200px rgba(255, 140, 0, 1), 0 0 350px rgba(255, 140, 0, 0.7); /* Glowing effect around the rays */
+  filter: blur(120px); 
+  transform: rotate(45deg); 
+  z-index: 2; 
+  box-shadow: 0 0 200px rgba(255, 140, 0, 1), 0 0 350px rgba(255, 140, 0, 0.7);
   overflow-x: hidden;
+} */
+
+.ray-effect {
+  height: 488px;
+  width: 12px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 140, 0, 1) 15%,
+    rgba(255, 140, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-20, -20);
+  rotate: 62deg;
+  filter: blur(10px);
+  transform-origin: top right;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 120px rgba(255, 100, 0, 1),
+    0 0 140px rgba(255, 140, 0, 1);
 }
 
+.ray-effect-1 {
+  height: 280px;
+  width: 15px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 140, 0, 1) 15%,
+    rgba(255, 140, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-20, -20);
+  rotate: 70deg;
+  filter: blur(10px);
+  transform-origin: top right;
+  box-shadow: 0 0 50px rgba(255, 165, 0, 1), 0 0 120px rgba(255, 100, 0, 1),
+    0 0 180px rgba(255, 140, 0, 1);
+}
+.ray-effect-2 {
+  height: 340px;
+  width: 15px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 140, 0, 1) 15%,
+    rgba(255, 140, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  right: 0;
+  margin-right: 28px;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-20, -20);
+  rotate: 78deg;
+  filter: blur(10px);
+  transform-origin: top right;
+  box-shadow: 0 0 10px rgb(15, 15, 15), 0 0 10px rgba(242, 123, 4, 0.2),
+    0 0 10px rgb(0, 0, 0);
+}
 /* Content styling */
 /* Adjust content so it's centered below navbar */
 .content {
@@ -59,5 +118,6 @@ Main background .app-background {
   z-index: 5;
   color: white;
   text-align: center;
-  margin-top: 5rem; /* Push content down */
+  margin-top: 5rem;
+  /* Push content down */
 }
