@@ -234,12 +234,12 @@ const CircuitDiagram = () => {
   };
 
   const paths = [
-    createCurvedPath(centerX, centerY, leftX, topY + 100, false),
-    createCurvedPath(centerX, centerY, leftX - 40, middleY, false),
-    createCurvedPath(centerX, centerY, leftX + 14, bottomY, false),
-    createCurvedPath(centerX, centerY, rightX - 14, topY, true),
-    createCurvedPath(centerX, centerY, rightX - 14, middleY, true),
-    createCurvedPath(centerX, centerY, rightX - 94, bottomY, true),
+    createCurvedPath(centerX, centerY, leftX, topY, true),
+    createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
+    createCurvedPath(centerX + 240, centerY, leftX + 114, bottomY, false),
+    createCurvedPath(centerX, centerY, rightX + 267, true),
+    createCurvedPath(centerX + 210, centerY, rightX + 294, middleY, true),
+    createCurvedPath(centerX + 210, centerY, rightX + 314, bottomY, true),
   ];
 
   return (
@@ -292,7 +292,7 @@ const CircuitDiagram = () => {
       </div>
 
       <svg
-        className="absolute inset-0 top-1/4 transform -translate-y-1/2 w-full h-[600px] flex items-center justify-center ml-62 overflow-hidden z-[-1]"
+        className="absolute inset-0 top-1/4 transform -translate-y-1/2 w-full h-[600px] flex items-center justify-center pl-12 overflow-hidden z-[-1]"
         style={{ pointerEvents: "none" }}
       >
         {paths.map((d, i) => (
@@ -303,7 +303,7 @@ const CircuitDiagram = () => {
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
-            animate={{ pathLength: 2 }}
+            animate={{ pathLength: 1 }}
             transition={{ duration: 1, delay: 0.3 * i }}
           />
         ))}
@@ -340,7 +340,7 @@ const CircuitDiagram = () => {
       </svg>
 
       <motion.div
-        className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-xl bg-gray-800 flex items-center justify-center shadow-lg z-10"
+        className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 ml-7 rounded-xl bg-gray-800 flex items-center justify-center shadow-lg z-10"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
