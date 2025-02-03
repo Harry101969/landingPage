@@ -1,26 +1,3 @@
-// import { useEffect } from "react";
-// import { useState } from "react";
-
-// const RayEffect = () => {
-//   const [loaded, isLoaded] = useState(false);
-//   useEffect(() => {
-//     setTimeout(() => {
-//       isLoaded(true);
-//     }, 3500);
-//   }, []);
-
-//   if (!loaded) return null;
-//   return (
-//     <div className="ray-container">
-//       <div className="ray-effect"></div>
-//       <div className="ray-effect-1"></div>
-//       <div className="ray-effect-2"></div>
-//     </div>
-//   );
-// };
-
-// export default RayEffect;
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
