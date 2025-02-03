@@ -5,4 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [tailwindcss(), tailwindcss(), react()],
+  server: {
+    port: 5173, // Ensure the port matches the one exposed in docker-compose.yml
+  },
 });
