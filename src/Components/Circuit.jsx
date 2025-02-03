@@ -62,7 +62,7 @@ const CircuitDiagram = () => {
     createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
     createCurvedPath(centerX + 240, centerY, leftX + 114, bottomY, false),
     createCurvedPath(centerX, centerY, rightX + 267, true),
-    createCurvedPath(centerX + 210, centerY, rightX + 294, middleY, true),
+    createCurvedPath(centerX + 210, centerY, rightX + 296, middleY, true),
     createCurvedPath(centerX + 210, centerY, rightX + 314, bottomY, true),
   ];
 
@@ -116,7 +116,7 @@ const CircuitDiagram = () => {
       </div>
 
       <svg
-        className="absolute inset-0 top-1/4 transform -translate-y-1/2 w-full h-[600px] flex items-center justify-center pl-12 overflow-hidden z-[-1]"
+        className="absolute inset-0 top-1/4 transform -translate-y-1/2 w-full h-[600px] flex items-center justify-center pl-12 overflow-hidden z-[-1] paths"
         style={{ pointerEvents: "none" }}
       >
         {paths.map((d, i) => (
@@ -155,7 +155,7 @@ const CircuitDiagram = () => {
             style={{ pathLength: 0 }}
             transition={{
               duration: 1.5,
-              delay: i * 0.4,
+              delay: 0.5,
               repeat: Infinity,
               repeatDelay: 1,
             }}
