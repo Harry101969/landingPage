@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 300); // 0.2 seconds delay
+    }, 4000); // 0.2 seconds delay
     return () => clearTimeout(timer);
   }, []);
 

@@ -186,8 +186,18 @@
 
 import { motion } from "framer-motion";
 import { Brain, Mail, MessageSquare, Grid } from "lucide-react";
-
+import { useState, useEffect } from "react";
 const CircuitDiagram = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) return null;
   const containerVariants = {
     hidden: { y: 100, opacity: 0 },
     visible: {
@@ -234,7 +244,7 @@ const CircuitDiagram = () => {
   };
 
   const paths = [
-    createCurvedPath(centerX, centerY, leftX, topY, true),
+    createCurvedPath(centerX, centerY, leftX + 34, topY, true),
     createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
     createCurvedPath(centerX + 240, centerY, leftX + 114, bottomY, false),
     createCurvedPath(centerX, centerY, rightX + 267, true),
@@ -303,7 +313,7 @@ const CircuitDiagram = () => {
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
+            animate={{ pathLength: 2 }}
             transition={{ duration: 1, delay: 0.3 * i }}
           />
         ))}
