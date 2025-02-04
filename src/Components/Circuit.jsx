@@ -60,8 +60,8 @@ const CircuitDiagram = () => {
   const paths = [
     createCurvedPath(centerX, centerY, leftX + 34, topY, true),
     createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
-    createCurvedPath(centerX + 240, centerY, leftX + 114, bottomY, false),
-    createCurvedPath(centerX, centerY, rightX + 267, true),
+    createCurvedPath(centerX + 240, centerY, leftX, bottomY, false),
+    createCurvedPath(centerX, centerY, rightX + 260, true),
     createCurvedPath(centerX + 210, centerY, rightX + 296, middleY, true),
     createCurvedPath(centerX + 210, centerY, rightX + 314, bottomY, true),
   ];
@@ -75,19 +75,19 @@ const CircuitDiagram = () => {
     >
       <div className="absolute left-0 top-0 h-full flex flex-col justify-between py-5 overflow-hidden">
         <motion.div
-          className="w-20 h-20 rounded-lg ml-10 bg-gray-800 flex items-center justify-center"
+          className="w-20 h-20 rounded-lg ml-10 bg-black border border-white flex items-center justify-center"
           variants={containerVariants}
         >
           <MessageSquare className="w-10 h-10 text-white" />
         </motion.div>
         <motion.div
-          className="w-14 h-14 rounded-lg bg-gray-800 flex items-center justify-center"
+          className="w-14 h-14 rounded-lg border bg-black border-white flex items-center justify-center"
           variants={containerVariants}
         >
           <Grid className="w-7 h-7 text-white" />
         </motion.div>
         <motion.div
-          className="w-20 h-20 rounded-lg ml-10 bg-gray-800 flex items-center justify-center"
+          className="w-20 h-20 rounded-lg ml-10 border bg-black border-white flex items-center justify-center"
           variants={containerVariants}
         >
           <Mail className="w-10 h-10 text-white" />
@@ -96,19 +96,19 @@ const CircuitDiagram = () => {
 
       <div className="absolute right-0 top-0 h-full flex flex-col justify-between py-5 overflow-hidden">
         <motion.div
-          className="w-20 h-20 rounded-lg bg-gray-800 flex items-center justify-center"
+          className="w-20 h-20 rounded-lg border border-white bg-black flex items-center justify-center"
           variants={containerVariants}
         >
           <MessageSquare className="w-10 h-10 text-white" />
         </motion.div>
         <motion.div
-          className="w-14 h-14 rounded-lg ml-10 bg-gray-800 flex items-center justify-center"
+          className="w-14 h-14 rounded-lg ml-10  flex items-center border border-white bg-black justify-center"
           variants={containerVariants}
         >
           <Grid className="w-7 h-7 text-white" />
         </motion.div>
         <motion.div
-          className="w-20 h-20 rounded-lg bg-gray-800 flex items-center justify-center"
+          className="w-20 h-20 rounded-lg  flex items-center border border-white bg-black justify-center"
           variants={containerVariants}
         >
           <Mail className="w-10 h-10 text-white" />
@@ -164,7 +164,7 @@ const CircuitDiagram = () => {
       </svg>
 
       <motion.div
-        className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 ml-7 rounded-xl bg-gray-800 flex items-center justify-center shadow-lg z-10"
+        className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 ml-7 rounded-xl border border-white bg-black flex items-center justify-center shadow-lg z-10"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
