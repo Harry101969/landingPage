@@ -24,47 +24,47 @@ const CircuitDiagram = () => {
     },
   };
 
-  const centerX = 400;
-  const centerY = 300;
-  const leftX = -150;
-  const rightX = 900;
-  const topY = 120;
-  const middleY = 400;
-  const bottomY = 510;
-  const curveOffset = 60;
+  // const centerX = 400;
+  // const centerY = 300;
+  // const leftX = -150;
+  // const rightX = 900;
+  // const topY = 120;
+  // const middleY = 400;
+  // const bottomY = 510;
+  // const curveOffset = 60;
 
-  const createCurvedPath = (startX, startY, endX, endY, isRight) => {
-    const midX = isRight
-      ? Math.min(startX + curveOffset, endX - curveOffset)
-      : Math.max(startX - curveOffset, endX + curveOffset);
-    return `M ${startX} ${startY} L ${midX} ${startY} Q ${
-      midX + (isRight ? curveOffset : -curveOffset)
-    } ${startY} ${midX + (isRight ? curveOffset : -curveOffset)} ${
-      startY + (endY > startY ? curveOffset : -curveOffset)
-    } L ${endX} ${endY}`;
-  };
+  // const createCurvedPath = (startX, startY, endX, endY, isRight) => {
+  //   const midX = isRight
+  //     ? Math.min(startX + curveOffset, endX - curveOffset)
+  //     : Math.max(startX - curveOffset, endX + curveOffset);
+  //   return `M ${startX} ${startY} L ${midX} ${startY} Q ${
+  //     midX + (isRight ? curveOffset : -curveOffset)
+  //   } ${startY} ${midX + (isRight ? curveOffset : -curveOffset)} ${
+  //     startY + (endY > startY ? curveOffset : -curveOffset)
+  //   } L ${endX} ${endY}`;
+  // };
 
-  const pulseVariants = {
-    initial: { pathLength: 0 },
-    animate: {
-      pathLength: 1,
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: "linear",
-        repeatDelay: 1,
-      },
-    },
-  };
+  // const pulseVariants = {
+  //   initial: { pathLength: 0 },
+  //   animate: {
+  //     pathLength: 1,
+  //     transition: {
+  //       duration: 1.5,
+  //       repeat: Infinity,
+  //       ease: "linear",
+  //       repeatDelay: 1,
+  //     },
+  //   },
+  // };
 
-  const paths = [
-    createCurvedPath(centerX, centerY, leftX + 34, topY, true),
-    createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
-    createCurvedPath(centerX + 240, centerY, leftX, bottomY, false),
-    createCurvedPath(centerX, centerY, rightX + 260, true),
-    createCurvedPath(centerX + 210, centerY, rightX + 296, middleY, true),
-    createCurvedPath(centerX + 210, centerY, rightX + 314, bottomY, true),
-  ];
+  // const paths = [
+  //   createCurvedPath(centerX, centerY, leftX + 34, topY, true),
+  //   createCurvedPath(centerX + 240, centerY, leftX, middleY, false),
+  //   createCurvedPath(centerX + 240, centerY, leftX, bottomY, false),
+  //   createCurvedPath(centerX, centerY, rightX + 260, true),
+  //   createCurvedPath(centerX + 210, centerY, rightX + 296, middleY, true),
+  //   createCurvedPath(centerX + 210, centerY, rightX + 314, bottomY, true),
+  // ];
 
   return (
     <motion.div
@@ -115,7 +115,7 @@ const CircuitDiagram = () => {
         </motion.div>
       </div>
 
-      <svg
+      {/* <svg
         className="absolute inset-0 top-1/4 transform -translate-y-1/2 w-full h-[600px] flex items-center justify-center pl-12 overflow-hidden z-[-1] paths"
         style={{ pointerEvents: "none" }}
       >
@@ -161,7 +161,7 @@ const CircuitDiagram = () => {
             }}
           />
         ))}
-      </svg>
+      </svg> */}
 
       <motion.div
         className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 ml-7 rounded-xl border border-white bg-black flex items-center justify-center shadow-lg z-10"
